@@ -1,0 +1,55 @@
+{
+	"id": "d0a725e8-bafb-e7df-787b-b5152c36d4a7",
+	"name": "HW1",
+	"description": "",
+	"order": [
+		"398ee8ca-4794-6e74-3a03-efac9c50aaa0",
+		"6fb6339d-fee8-919a-5e91-166489778fd5"
+	],
+	"folders": [],
+	"timestamp": 1485321170371,
+	"owner": "1497775",
+	"public": false,
+	"requests": [
+		{
+			"id": "398ee8ca-4794-6e74-3a03-efac9c50aaa0",
+			"headers": "",
+			"url": "https://www.googleapis.com/books/v1/volumes?q={{book_title}}",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "d0a725e8-bafb-e7df-787b-b5152c36d4a7",
+			"data": null,
+			"dataMode": "params",
+			"name": "https://www.googleapis.com/books/v1/volumes?q={{book_title}}",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1486061217099,
+			"version": 2,
+			"responses": [],
+			"tests": "var jsonData = JSON.parse(responseBody);\n\npostman.setEnvironmentVariable(\"id\", jsonData.items[0].id);",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "6fb6339d-fee8-919a-5e91-166489778fd5",
+			"headers": "",
+			"url": "https://www.googleapis.com/books/v1/volumes/{{id}}",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "d0a725e8-bafb-e7df-787b-b5152c36d4a7",
+			"data": null,
+			"dataMode": "params",
+			"name": "https://www.googleapis.com/books/v1/volumes/{{id}}",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1486061222721,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
